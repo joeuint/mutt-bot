@@ -1,0 +1,3 @@
+Mutt-Bot is a discord bot written in typescript with the `discord.js`
+library. It is in early alpha and not stable. Please feel free to submit
+patches and bug reports to the sourcehut repo!

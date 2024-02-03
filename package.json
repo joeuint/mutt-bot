@@ -1,0 +1,27 @@
+{
+  "name": "mutt-bot",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "A simple bot written in Typescript!",
+  "repository": "https://github.com/joeuint/mutt-bot",
+  "author": "Joseph Umana <joseph@josephumana.com>",
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.0",
+    "nodemon": "^3.0.3",
+    "prettier": "^3.2.4",
+    "typescript": "^5.3.3",
+    "yarn": "^1.22.21"
+  },
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail \"tsc --watch\" \"nodemon dist/index.js\"",
+    "build": "tsc",
+    "commands:local": "yarn build && node scripts/deployLocal.js"
+  },
+  "dependencies": {
+    "@types/node": "^20.11.6",
+    "discord.js": "^14.14.1",
+    "ts-node": "^10.9.2"
+  }
+}
