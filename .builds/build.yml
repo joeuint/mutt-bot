@@ -1,0 +1,12 @@
+image: archlinux
+secrets:
+    - c114e40e-81df-418a-8a9d-5af3cba167c1
+sources:
+    - https://git.sr.ht/~joeuint/mutt-bot
+environment:
+    github_mirror: git@github.com:joeuint/mutt-bot.git
+tasks:
+    - mirror: |
+        ssh-keyscan github.com >"$HOME"/.ssh/known_hosts
+        cd mutt-bot
+        git push --mirror "$github_mirror"
